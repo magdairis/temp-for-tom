@@ -1,5 +1,6 @@
 import emotionTailwindPreflight from "emotion-tailwind-preflight";
 import { css } from '@emotion/core';
+import tw from 'tailwind.macro';
 
 export const globalStyles = css`
   ${emotionTailwindPreflight}
@@ -7,8 +8,14 @@ export const globalStyles = css`
   body {
     padding: 0;
     margin: 0;
-    background: white;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     font-family: Helvetica, Arial, sans-serif;
+    ${tw`bg-blue-300`};
+  }
+  body>div {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 `
